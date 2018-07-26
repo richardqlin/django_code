@@ -1,0 +1,19 @@
+<html>
+<body>
+<h2 style="color:Maroon;"> {{user|capfirst}}, Please  rental you prefer. Thank you, good luck! </h2>	
+<h5 style="color:red">Date Time: {{time}} {{day}}</h5>
+
+	<form action="/rental/update/" method="post">
+
+	{% csrf_token %}
+
+	{{rental}}
+
+	<input type="submit" Value="Rental">
+</form>
+
+
+<p> <li>Click <a href="/rental/menu">here</a> return to menu of {{user|capfirst}} rental information</li>
+	
+</body>
+</html>

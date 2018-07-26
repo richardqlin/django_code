@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="color:Purple">Hi, welcome to the rental profilio of {{full_name|capfirst }}</h1>
+<h5 style="color:red">Date Time: {{time}} {{day}}</h5>
+
+
+
+
+<h3 style='color: orange'> Rental of your profolio</h3>
+	<section>
+<table border="1" style="width:100%">
+	<tr>
+		<td>Rental Car</td>
+		<td>Available</td>
+		<td>Reverse</td>
+	</tr>	
+{%for  c in context%}
+	<tr>
+	{% for a in c %}
+	<td>{{a}}</td>
+	{%endfor%}
+	</tr>
+{%endfor%}
+</table>
+</section>
+<p> <li>Click <a href="/rental/menu">here</a> return to menu of {{full_name}} rental profilio</li>
+
+	{% endblock %}
